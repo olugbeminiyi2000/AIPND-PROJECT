@@ -1,72 +1,86 @@
-# Flower Species Classifier
+![Python](https://img.shields.io/badge/Python-43.1%25-brightgreen.svg) ![JSON](https://img.shields.io/badge/JSON-100%25-lightgrey.svg) ![PyTorch](https://img.shields.io/badge/PyTorch-100%25-red.svg)
+ ![pip](https://img.shields.io/badge/pip-43.1%25-brightgreen.svg) ![contributors](https://img.shields.io/badge/contributors-1-orange.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-This project involves training an image classifier to recognize different species of flowers. Imagine integrating this into a phone app to identify flowers by capturing their images with a camera. The classifier is trained on a dataset containing 102 flower categories and can be exported for practical applications.
+# 🌸 Flower Species Classifier
 
-## Features
+![Python](https://img.shields.io/badge/Python-100%25-brightgreen.svg) ![PyTorch](https://img.shields.io/badge/PyTorch-100%25-red.svg) ![Torchvision](https://img.shields.io/badge/Torchvision-100%25-orange.svg) ![Matplotlib](https://img.shields.io/badge/Matplotlib-100%25-blue.svg) ![JSON](https://img.shields.io/badge/JSON-100%25-lightgrey.svg)
 
-- **Training Data Augmentation**: Enhances training data with random scaling, rotations, mirroring, and cropping using torchvision transforms.
-- **Pretrained Network**: Leverages a pretrained model (e.g., VGG16) from `torchvision.models` for feature extraction.
-- **Feedforward Classifier**: A new feedforward network is designed to classify images using the features extracted by the pretrained model.
-- **Model Saving and Loading**: Supports saving the trained model as a checkpoint, including hyperparameters and `class_to_idx` mapping, and restoring it with a dedicated function.
-- **Image Processing**: Includes a function to preprocess images into a format suitable for prediction.
-- **Class Prediction**: Predicts the top K probable classes of an input image and provides a visualization with Matplotlib.
-- **Command Line Applications**:
+This project involves training an image classifier to recognize different species of flowers. Imagine integrating this into a phone app to identify flowers by capturing their images with a camera. The classifier is trained on a dataset containing **102 flower categories** and can be exported for practical applications.
+
+---
+
+## ✨ Features
+
+- 🎨 **Training Data Augmentation**: Enhances training data with random scaling, rotations, mirroring, and cropping using `torchvision` transforms.
+- 🔍 **Pretrained Network**: Leverages a pretrained model (e.g., `VGG16`) from `torchvision.models` for feature extraction.
+- 🤖 **Feedforward Classifier**: A new feedforward network is designed to classify images using the features extracted by the pretrained model.
+- 💾 **Model Saving and Loading**: Supports saving the trained model as a checkpoint, including hyperparameters and `class_to_idx` mapping, and restoring it with a dedicated function.
+- 📸 **Image Processing**: Includes a function to preprocess images into a format suitable for prediction.
+- 🏷️ **Class Prediction**: Predicts the top K probable classes of an input image and provides a visualization with Matplotlib.
+- 🖥️ **Command Line Applications**:
   - Train a new model using `train.py`.
   - Predict flower species using `predict.py`.
 
-## Dataset
-The project utilizes a dataset of 102 flower categories.
+---
 
-## Rubrics and Implementation
+## 📂 Dataset
+
+The project utilizes a dataset of **102 flower categories**.
+
+---
+
+## 📜 Rubrics and Implementation
 
 ### Part 1 - Development Notebook
 
-#### Package Imports
+#### 🧩 Package Imports
 - All required packages and modules are imported in the first cell of the notebook.
 
-#### Data Preparation
-- **Augmentation**: Uses torchvision transforms for scaling, rotations, mirroring, and cropping.
+#### 🛠️ Data Preparation
+- **Augmentation**: Uses `torchvision.transforms` for scaling, rotations, mirroring, and cropping.
 - **Normalization**: Normalizes training, validation, and testing datasets.
 - **Data Loading**: Uses `torchvision.datasets.ImageFolder` and `torch.utils.data.DataLoader` for loading datasets.
 
-#### Model
-- **Pretrained Network**: Loads a pretrained model (e.g., VGG16) with frozen parameters.
+#### 🏗️ Model
+- **Pretrained Network**: Loads a pretrained model (e.g., `VGG16`) with frozen parameters.
 - **Feedforward Classifier**: Implements a custom classifier for flower species recognition.
 
-#### Training
+#### 🚀 Training
 - Trains the classifier parameters while keeping the feature network static.
 - Displays validation loss and accuracy during training.
 
-#### Testing
+#### 🧪 Testing
 - Measures accuracy on test data.
 
-#### Saving and Loading
+#### 💾 Saving and Loading
 - Saves the model checkpoint with hyperparameters and `class_to_idx` dictionary.
 - Includes a function to load the checkpoint and rebuild the model.
 
-#### Image Prediction
+#### 🖼️ Image Prediction
 - Implements `process_image` to convert a PIL image into model input format.
 - Includes `predict` to return the top K probable classes for a given image.
 
-#### Sanity Check
+#### ✅ Sanity Check
 - Displays an image with its top 5 most probable classes using Matplotlib.
 
 ### Part 2 - Command Line Application
 
-#### Training with `train.py`
+#### 🎓 Training with `train.py`
 - Trains a new model and saves it as a checkpoint.
 - Prints training loss, validation loss, and validation accuracy during training.
-- Supports selecting from multiple model architectures (e.g., VGG16, ResNet).
+- Supports selecting from multiple model architectures (e.g., `VGG16`, `ResNet`).
 - Allows setting hyperparameters such as learning rate, hidden units, and epochs.
 - Enables training on GPU if available.
 
-#### Prediction with `predict.py`
+#### 📊 Prediction with `predict.py`
 - Reads an image and model checkpoint, predicting the most likely class and probability.
 - Displays the top K classes and probabilities.
 - Loads a JSON file to map class indices to category names.
 - Supports GPU-based predictions.
 
-## Setup and Installation
+---
+
+## ⚙️ Setup and Installation
 
 1. Clone the repository:
    ```bash
@@ -74,9 +88,11 @@ The project utilizes a dataset of 102 flower categories.
    ```
 2. Ensure you have the dataset downloaded and structured appropriately.
 
-## Usage
+---
 
-### Training
+## 🚀 Usage
+
+### 🏋️ Training
 Train a new model with `train.py`:
 ```bash
 python train.py --data_dir <data_directory> --save_dir <save_directory> \
@@ -84,26 +100,37 @@ python train.py --data_dir <data_directory> --save_dir <save_directory> \
 --epochs <epochs> --gpu
 ```
 
-### Prediction
+### 🔍 Prediction
 Predict the class of a flower image with `predict.py`:
 ```bash
 python predict.py <image_path> <checkpoint_path> --top_k <k> --category_names <json_file> --gpu
 ```
 
-## Examples
+---
 
-### Training Example
+## 📖 Examples
+
+### 🏋️ Training Example
 ```bash
 python train.py --data_dir flowers --save_dir checkpoints --arch vgg16 \
 --learning_rate 0.001 --hidden_units 512 --epochs 10 --gpu
 ```
 
-### Prediction Example
+### 🔍 Prediction Example
 ```bash
 python predict.py flowers/test/1/image_06743.jpg checkpoints/checkpoint.pth \
 --top_k 5 --category_names cat_to_name.json --gpu
 ```
 
-## Acknowledgements
+---
+
+## 🙏 Acknowledgements
 
 This project uses the [102 Category Flower Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/) and is inspired by practical applications in computer vision and deep learning.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
