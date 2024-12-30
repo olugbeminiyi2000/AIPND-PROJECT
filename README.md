@@ -1,10 +1,7 @@
-![Python](https://img.shields.io/badge/Python-43.1%25-brightgreen.svg) ![JSON](https://img.shields.io/badge/JSON-100%25-lightgrey.svg) ![PyTorch](https://img.shields.io/badge/PyTorch-100%25-red.svg)
+![Python](https://img.shields.io/badge/Python-100%25-brightgreen.svg) ![PyTorch](https://img.shields.io/badge/PyTorch-100%25-red.svg) ![Torchvision](https://img.shields.io/badge/Torchvision-100%25-orange.svg) ![Matplotlib](https://img.shields.io/badge/Matplotlib-100%25-blue.svg) ![JSON](https://img.shields.io/badge/JSON-100%25-lightgrey.svg)
  ![pip](https://img.shields.io/badge/pip-43.1%25-brightgreen.svg) ![contributors](https://img.shields.io/badge/contributors-1-orange.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 # 🌸 Flower Species Classifier
-
-![Python](https://img.shields.io/badge/Python-100%25-brightgreen.svg) ![PyTorch](https://img.shields.io/badge/PyTorch-100%25-red.svg) ![Torchvision](https://img.shields.io/badge/Torchvision-100%25-orange.svg) ![Matplotlib](https://img.shields.io/badge/Matplotlib-100%25-blue.svg) ![JSON](https://img.shields.io/badge/JSON-100%25-lightgrey.svg)
-
 This project involves training an image classifier to recognize different species of flowers. Imagine integrating this into a phone app to identify flowers by capturing their images with a camera. The classifier is trained on a dataset containing **102 flower categories** and can be exported for practical applications.
 
 ---
