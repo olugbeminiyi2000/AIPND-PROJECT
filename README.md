@@ -70,7 +70,7 @@ The project utilizes a dataset of 102 flower categories.
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/olugbeminiyi2000/AIPND-PROJECT.git
    ```
 2. Install the required dependencies:
    ```bash
