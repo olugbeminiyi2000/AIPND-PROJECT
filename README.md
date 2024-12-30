@@ -72,11 +72,7 @@ The project utilizes a dataset of 102 flower categories.
    ```bash
    git clone https://github.com/olugbeminiyi2000/AIPND-PROJECT.git
    ```
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Ensure you have the dataset downloaded and structured appropriately.
+2. Ensure you have the dataset downloaded and structured appropriately.
 
 ## Usage
 
